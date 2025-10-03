@@ -1,0 +1,31 @@
+SQL TASK 7 — INTERVIEW QUESTIONS
+
+1. What is a view?
+A view is a virtual table created from a SQL SELECT query. It doesn’t store data itself but displays data from one or more tables.
+
+2. Can we update data through a view?
+Yes, if the view is based on a single table and doesn’t include GROUP BY, DISTINCT, or aggregate functions. Otherwise, updates may be restricted.
+
+3. What is a materialized view?
+A materialized view stores the result of a query physically like a table. It can be refreshed periodically and improves performance for complex queries.
+
+4. Difference between view and table?
+A table stores actual data in the database. A view is a saved query that displays data from tables but doesn’t store it.
+
+5. How to drop a view?
+Use the command: DROP VIEW view_name;
+
+6. Why use views?
+Views simplify complex queries, improve readability, provide abstraction, and help restrict access to sensitive data.
+
+7. Can we create indexed views?
+Yes, in some databases like SQL Server. Indexed views store data physically and improve performance but have strict creation rules.
+
+8. How to secure data using views?
+By creating views that expose only specific columns or rows, you can control what users see without giving access to full tables.
+
+9. What are limitations of views?
+Views can’t always be updated, especially if they include joins, aggregates, or complex logic. Performance may be slower than direct table access.
+
+10. How does WITH CHECK OPTION work?
+WITH CHECK OPTION ensures that data inserted or updated through a view meets the view’s WHERE condition. It prevents changes that would make rows invisible to the view.
